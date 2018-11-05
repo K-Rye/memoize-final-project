@@ -1,0 +1,21 @@
+.question-card {
+  align-content: flex-start;
+  background: white;
+  border: white solid 2px;
+  height: 330px;
+  width: 600px;
+}
+
+.option {
+  margin-left: 20px;
+  
+}
+
+.question-submit-button {
+  color: black;
+  outline: none;
+  padding: 10px 10px 10px 10px;
+  height: 40px;
+  width: 100px;
+  font-size: 20px;
+}
