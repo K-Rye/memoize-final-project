@@ -4,12 +4,12 @@ import './progress.scss'
 export default function Progress() {
     return (
       <div className='score-board'>
-        <h1 className='progress-tracker proficient'>
-          Proficiet:
-        </h1>
-        <h1 className='progress-tracker need-work'>
-          Need Work:
-        </h1>
+        <button className='progress-tracker proficient'>
+          Proficient
+        </button>
+        <button className='progress-tracker need-work'>
+          Needs Work:
+        </button>
       </div>
   );
 }

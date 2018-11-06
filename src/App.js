@@ -9,21 +9,19 @@ class App extends Component {
   constructor() {
     super();
     this.state = {
-      question:[],
-      A:[],
-      B:[],
-      C:[]
-
+      questions:[]
     } 
   }
 
-
-// componentDidMount = () => {
-//   fetch('https://memoize-datasets.herokuapp.com/api/v1/usefuljavascript')
-//   .then(response => response.json())
-//   .then(questions => usefulJavascript.question)
-//   .catch(error => console.log(error));
-// }
+  componentDidMount = () => {
+    fetch('https://memoize-datasets.herokuapp.com/api/v1/usefuljavascript')
+    .then(response => response.json())
+    .then(result => {
+      this.setState({
+        questions:result.questions
+      });
+    })
+  }
 
   render() {
     return (
