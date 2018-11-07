@@ -13,7 +13,7 @@ export default function Card(props) {
         <div className='option answer-a'>A:  {props.answer}</div>
         <div className='option answer-b'>B:  {props.answer}</div>
         <div className='option answer-c'>C:  {props.answer}</div>
-        <div className='hint-link'>Hint:   </div>
+        <div className='hint-link'><a href={props.hint}>Hint</a></div>
 
       </div>
     </div>

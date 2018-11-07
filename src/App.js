@@ -12,7 +12,8 @@ class App extends Component {
     this.state = {
       questions: [],
       currentCard:[],
-      answer:[]
+      answer:[],
+      hint:[]
     } 
   }
 
@@ -29,10 +30,21 @@ class App extends Component {
       const answers = answerKeys.map(key => {
         return currentCard[key]
       })
+
+      const hintKey = Object.keys(currentCard).filter(key => {
+        if(key.includes('more')) {
+          return true
+        }
+      })
+      const hint = hintKey.map(key => {
+        return currentCard[key]
+      })
+
       this.setState({
         questions:result.usefulJavascript,
         currentCard,
-        answer:answers[0]
+        answer:answers[0],
+        hint:hint[0]
       });
     })
     .catch(error => console.log(error))
@@ -44,11 +56,9 @@ class App extends Component {
   }
 
   updateCard = () => {
-    const nextCards = this.state.cards;
-    this.setState({
-      currentCard: this.getRandomCard(nextCards)
-    })
-  }
+    this.getRandomCard()
+  };
+
 
   render() {
     return (
@@ -59,7 +69,8 @@ class App extends Component {
         </header>
         <div className='card-style'>
           <Card question={this.state.currentCard.question}
-                answer={this.state.answer} />
+                answer={this.state.answer} 
+                hint={this.state.hint}/>
         </div>
         <div className='draw-button'>
           <DrawCard newCard={this.updateCard}/>
