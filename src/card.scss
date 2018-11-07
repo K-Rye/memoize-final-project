@@ -31,11 +31,9 @@
   line-height: 50px; 
   font-size: 17px;
  
-
-
   &:hover {
     cursor: pointer;
-    color: white;
+    font-style: italic;
     transform: scale(1.1);
   }
 }
@@ -45,5 +43,9 @@
   font-family: 'Merriweather', serif;
   font-size: 20px;
   margin-top: 20px;
+
+  &:hover {
+    font-style: italic;
+  }
 }
 

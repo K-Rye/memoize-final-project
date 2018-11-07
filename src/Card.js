@@ -10,9 +10,9 @@ export default function Card(props) {
         <div className='question'>{props.question}</div>
       </div>
       <div className='back'>
-        <div className='option answer-a'>A:  {props.answer}</div>
-        <div className='option answer-b'>B:  {props.answer}</div>
-        <div className='option answer-c'>C:  {props.answer}</div>
+        <div className='option answer-a'>A:  {props.answer1}</div>
+        <div className='option answer-b'>B:  {props.answer2}</div>
+        <div className='option answer-c'>C:  {props.answer3}</div>
         <div className='hint-link'><a href={props.hint}>Hint</a></div>
 
       </div>

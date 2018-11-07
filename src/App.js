@@ -12,7 +12,9 @@ class App extends Component {
     this.state = {
       questions: [],
       currentCard:[],
-      answer:[],
+      answer1:[],
+      answer2:[],
+      answer3:[],
       hint:[]
     } 
   }
@@ -43,7 +45,9 @@ class App extends Component {
       this.setState({
         questions:result.usefulJavascript,
         currentCard,
-        answer:answers[0],
+        answer1:answers[0],
+        answer2:answers[1],
+        answer3:answers[2],
         hint:hint[0]
       });
     })
@@ -65,11 +69,13 @@ class App extends Component {
       <div className="App">
         <header className="App-header">
          <h1 className='title'>Undefined...</h1>
-         <h5 className='subtitle'>The JavaScript Memorization Game</h5>
+         <h6 className='subtitle'>The JavaScript Memorization Game</h6>
         </header>
         <div className='card-style'>
           <Card question={this.state.currentCard.question}
-                answer={this.state.answer} 
+                answer1={this.state.answer1} 
+                answer2={this.state.answer2}
+                answer3={this.state.answer3}
                 hint={this.state.hint}/>
         </div>
         <div className='draw-button'>
