@@ -1,16 +1,20 @@
 import React, { Component } from 'react';
-// import Data from './Data.js'; 
-import Question from './Question.js';
 import './card.scss';
 
 export default function Card(props) {
-    return (
-      <ul className='card-question'>
-        {
-            <Question/>
-        
-        }
-      </ul>
-      
-    );
+  return (
+  <div className='card-continer'>
+    <div className='card'>
+      <div className='front'>
+        <div className='question'>Question:{props.question}</div>
+      </div>
+      <div className='back'>
+        <div className='answer'>Answer:{props.answer}</div>
+      </div>
+    </div>
+  </div>
+  )
 }
+
+
+

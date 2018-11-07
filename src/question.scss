@@ -6,9 +6,13 @@
   width: 600px;
 }
 
+.back {
+  visibility: hidden;
+  backface-visibility: hidden;
+}
+
 .option {
-  margin-left: 20px;
-  
+  margin-left: 20px; 
 }
 
 .question-submit-button {
