@@ -14,7 +14,7 @@ class DrawCard extends Component {
   render(props) {
     return(
       <div className='draw-card-button'>
-        <button className='btn' onClick={this.newCard}>Next Card</button>
+        <button className='btn' onClick={this.props.newCard}>Next Card</button>
       </div>
     
     );

@@ -56,12 +56,17 @@ class App extends Component {
 
   getRandomCard = (currentCards) => {
     const card = currentCards[Math.floor(Math.random()*currentCards.length)];
+    console.log('W',currentCards)
     return card;
   }
 
   updateCard = () => {
     this.getRandomCard()
   };
+
+  addClass = () => {
+    
+  }
 
 
   render() {

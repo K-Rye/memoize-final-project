@@ -10,14 +10,13 @@
   font-family: 'Merriweather', serif;
   font-size: 16px;
   font-weight: 700;
-  font-style: italic;
   width: 150px;
   height: 35px;
 
   &:hover {
     cursor: pointer;
     transform: scale(1.1);
-    color: #fff;
+    font-style: italic;
 
   }
 }
