@@ -2,9 +2,6 @@ import React, { Component } from 'react';
 import './App.scss';
 import Card from './Card.js';
 import DrawCard from './DrawCard.js';
-// import Scoreboard from './Scoreboard.js'
-// import Question from './Question.js'
-// import Progress from './Progress.js'
 
 class App extends Component {
   constructor(props) {
@@ -54,7 +51,7 @@ class App extends Component {
     .catch(error => console.log(error))
   }
 
-  getRandomCard = (currentCards) => {
+  getRandomCard(currentCards) {
     const card = currentCards[Math.floor(Math.random()*currentCards.length)];
     console.log('W',currentCards)
     return card;
@@ -67,7 +64,6 @@ class App extends Component {
   addClass = () => {
     
   }
-
 
   render() {
     return (
